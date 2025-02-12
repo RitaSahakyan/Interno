@@ -2,12 +2,11 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
-  font-weight: 500;
-  font-family: "Antic Didone", serif;
 }
 
 body {
   background-color: #f5f5f5;
+  font-family: "DM Serif Display", serif;
 }
 
 ul, li {
@@ -60,11 +59,12 @@ ul, li {
   height: 758px;
 }
 .home_img {
-  position: inherit;
+  position: relative;
+  display: flex;
 }
 .home_content {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 15%;
 }
 .home_heading {
@@ -224,6 +224,22 @@ pos .project_items {
 }
 .blog_articles-img {
   padding: 21px 21px 21px 21px;
+  display: flex;
+  position: relative;
+}
+.blog_articles-img-Text {
+  position: absolute;
+  background-color: #FFFFFF;
+  font-size: 16px;
+  width: 129px;
+  height: 40px;
+  color: #4D5053;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 40px;
+  margin-top: -90px;
+  border-radius: 10px 10px 10px 0;
 }
 .blog_articles-heading {
   font-size: 25px;
