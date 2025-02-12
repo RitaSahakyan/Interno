@@ -1,0 +1,311 @@
+@import 'vars';
+@import 'mixins';
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: "Antic Didone", serif;
+}
+body{
+    background-color: #f5f5f5;
+}
+ul, li{
+    list-style-type: none;
+}
+
+.box-content{
+    overflow: hidden;
+}
+
+
+.container {
+    padding-left: calc(50% - $websiteWidth / 2);
+    padding-right: calc(50% - $websiteWidth / 2);
+}
+.nav{
+    margin-top: 32px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    gap: 700px;
+    &_header{
+        display: flex;
+        gap: 10px;
+    }
+    &_name{
+    width: 133px;
+    font-size: 50px;
+    color: $selectedColor;
+    }
+    &_logo img{
+        width: 34px;
+        height: 34px;
+    }
+    &_items{
+        display: flex;
+        justify-content: space-between;
+        width: 258px;
+    }
+    &_item{
+        font-size: 20px;
+        color: $selectedColor;
+        
+    }
+}
+.home{
+    margin-top: 74px;
+    height: 758px;
+    &_img{
+        position: inherit;
+    }
+    &_content{
+        position: absolute;
+        top: 50%;
+        left:15%;
+    }
+    &_heading{
+        color: $selectedColor;
+        font-size: 65px;
+        width: 525px;
+        margin-bottom: 18px;
+    }
+    &_info{
+        color: #4D5053;
+        font-size: 22px;
+        width: 433px;
+        margin-bottom: 21px;
+    }
+    &_btn{
+        color: #FFFFFF;
+        font-size: 18px;
+        border: none;
+        border-radius: 18px;
+        background-color: $selectedColor;
+        width: 183px;
+        height: 75px;
+        display: flex;
+        gap: 4.91px;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.proj_section-heading{
+display: flex;
+flex-direction: column;
+text-align: center;
+margin-top: 91px;
+margin-bottom: 93px;
+}
+.proj_heading{
+    font-size: 50px;
+    color: $selectedColor;
+}
+.proj_info{
+    font-size: 22px;
+    color: #4D5053;
+}
+
+.project{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 104px;
+    pos
+    &_items{
+        width: 619px;
+        height: 549px;
+    }
+    &_item_container{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 104px;
+    }    
+    &_img{
+        height: 525px;
+        width: 548px;
+    }
+    &_item-info{
+        color: #4D5053;
+        font-size: 22px;
+    }
+    &_item-name{
+        color: $selectedColor;
+        font-size: 25px;
+    }
+    &_item-button{
+        background-color: #F4F0EC;
+        border:none;
+        width: 70px;
+        height: 70px;
+        border-radius: 100px;
+    }
+    &__btn-arrow{
+        height: 18px;
+        width: 8px;
+    }
+}
+
+.achievments{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    height: 457px;
+    background-color: #F4F0EC;
+    margin-top: 96px;
+    &_number{
+        color:#CDA274;
+        font-size: 85px;
+    }
+    &_descr{
+        color: #4D5053;
+        font-size: 22px;
+    }
+    &_box{
+        margin-top: 151px;
+        width: 207px;
+        text-align: center;
+        margin-right: 33px;
+    }
+    &_line{
+        margin-top: 151px;
+        width: 1px;
+        height: 130px;
+        background-color: #CDA274;
+        margin-right: 33px;
+    }
+}
+
+.blog{
+    &_content{
+        margin-top: 96px;
+        margin-bottom: 52px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    &_heading{
+        font-size: 50px;
+        color: $selectedColor;
+        width: 362px;
+    }
+    &_info{
+        margin-top: 12px;
+        width: 481px;
+        font-size: 22px;
+        color: #4D5053;
+    }
+    &_articles{
+        height: 521px;
+        display: flex;
+        gap: 27px;
+        
+        &-item{
+            border: 1px solid #E7E7E7;
+            background-color: #F4F0EC;
+            border-radius: 15%;
+            width: 382px;
+        }
+        &-item:first-child{
+            background-color: #FFFFFF;
+            border: 1px solid #E7E7E7;
+            border-radius: 15%;
+            width: 382px;
+        }
+        &-item:last-child{
+            background-color: #FFFFFF;
+            border: 1px solid #E7E7E7;
+            border-radius: 15%;
+            width: 382px;
+        }
+        &-img 
+        {
+            padding: 21px 21px 21px 21px;
+        }
+        &-heading{
+            font-size: 25px;
+            color: $selectedColor;
+            margin: 0 21px;
+        }
+        &-footer{
+            margin: 30px 21px 21px 21px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &-text{
+            font-size: 16px;
+            color: #4D5053;
+        }
+        &-btn{
+            width: 52px;
+            height: 52px;
+            background-color: #F4F0EC;
+            border-radius: 50%;
+            border: none;
+        }
+        &-btn-2{
+            width: 52px;
+            height: 52px;
+            background-color: #FFFFFF;
+            border-radius: 50%;
+            border: none;
+        }
+    }
+}
+
+.footer{
+    margin-top: 33px;
+    display: flex;
+    justify-content: space-between;
+    height: 437px;
+    &_links{
+        display: flex;
+        flex-direction: column;
+    }
+    &_websites img{
+        margin-top: 31px;
+        margin-right: 54px;
+        width: 18px ;
+        height: 22px;
+    }
+    &_pages{
+        width: 125px;
+    }
+    &_pages-items{
+        font-size: 22px;
+        color: #4D5053;
+    }
+    &_pages ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 238px;
+    }
+    &_pages-items:first-child{
+        font-size: 31px;
+        color: $selectedColor;
+    }
+    &_contacts{
+        width: 258px;
+    }
+    &_contacts-items{
+        font-size: 22px;
+        color: #4D5053;
+    }
+    &_contacts ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 238px;
+    }
+    &_contacts-items:first-child{
+        font-size: 31px;
+        color: $selectedColor;
+    }
+}
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue.js Пример</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        color: aqua;
+        font-weight: 800;
+        font-size: 25px;
+      }
+      button {
+        color: rgb(248, 149, 165);
+        font-size: 15px;
+        font-weight: 800;
+        width: 240px;
+        height: 50px;
+        border: 2px solid rgb(248, 149, 165);
+        border-radius: 5px;
+        background-color: #48ff8e;
+        cursor: pointer;
+      }
+      #app {
+        margin-top: 150px;
+        margin-left: 600px;
+      }
+      li {
+        cursor: pointer;
+        margin-bottom: 20px;
+        width: 350px;
+        padding: 5px;
+      }
+      li:hover {
+        border: 1px solid rgb(248, 149, 165);
+        background-color: #48ff8e;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <button @click="reverseText">{{ buttonText }}</button>
+      <br /><br /><br />
+      <ul>
+        <li
+          v-for="(item, index) in items"
+          :key="index"
+          @click="removeItem(index)"
+        >
+          {{ item }}
+        </li>
+      </ul>
+      <button @click="addItem">Добавить</button>
+    </div>
+
+    <script>
+      new Vue({
+        el: "#app",
+        data: {
+          buttonText: "Перевернуть",
+          items: [],
+        },
+        methods: {
+          reverseText() {
+            this.buttonText = this.buttonText.split("").reverse().join("");
+          },
+          addItem() {
+            this.items.push("Новый элемент списка");
+          },
+          removeItem(index) {
+            this.items.splice(index, 1);
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
